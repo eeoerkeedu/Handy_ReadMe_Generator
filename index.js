@@ -51,6 +51,7 @@ function handleInquirer() {
 				type: "input",
 				name: "test",
 				message: "Include any tests for users, or testing completed thus far.",
+				default: "npm test",
 			},
 			{
 				type: "checkbox",
