@@ -44,7 +44,7 @@ ${data.contribution}
 ${data.test}
 
 ## Questions
-Find an issue or have a question? Contact me ${data.email}. 
+Find an issue or have a question? Contact me via email ${data.email}. 
 If you liked what you found, you can view more of my projects at: 
 https://github.com/${data.github}.
 `;
