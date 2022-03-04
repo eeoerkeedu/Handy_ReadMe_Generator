@@ -13,38 +13,40 @@ function renderLicenseSection(license) {}
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
 	return `# ${data.title}
-	![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
-	
-	## Description 
-	${data.description}
+![Github licence](https://img.shields.io/badge/license-${data.license}-blue.svg)
 
-	## Table of Contents
-	* [Installation](#installation)
-	* [Usage](#usage)
-	* [License](#license)
-	* [Contributing](#contributing)
-	* [Tests](#tests)
-	* [Questions](#questions)
+## Link:${data.projlink}
+	
+## Description 
+${data.description}
 
-	## Installation 
-	${data.install}
-	
-	## Usage 
-	${data.usage}
-	
-	## License 
-	This project is license under ${data.license}
-	
-	## Contributing 
-	${data.contributors}
-	
-	## Tests
-	${data.test}
+## Table of Contents
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
-	## Questions
-  	Find an issue or have a question? Contact me ${data.email}. 
-	If you liked what you found, you can view more of my projects at: 
-	https://github.com/${data.github}.
+## Installation 
+${data.install}
+	
+## Usage 
+${data.usage}
+
+## License 
+This project is licensed under ${data.license}
+
+## How to Contribute 
+${data.contribution}
+
+## Tests
+${data.test}
+
+## Questions
+Find an issue or have a question? Contact me ${data.email}. 
+If you liked what you found, you can view more of my projects at: 
+https://github.com/${data.github}.
 `;
 }
 
