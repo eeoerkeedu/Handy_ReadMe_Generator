@@ -1,25 +1,39 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//creates a link to an appropriate license badge for the project based on the user input
 function renderLicenseBadge(data) {
-	const type = data.license;
-	if (!type) {
+	let licenseInput = data.license;
+	const licenseType = licenseInput.split(" ").join("");
+
+	if (!licenseType) {
 		return "";
 	} else {
-		return `![GitHub license](https://img.shields.io/badge/license-${type}-green)`;
+		return `![badge](https://img.shields.io/badge/license-${licenseType}-green)`;
 	}
 }
 
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
+//creates a link to the appropriate license document
+function renderLicenseLink(data) {
+	let licenseInput = data.license;
+	switch (licenseInput) {
+		case " MIT":
+			return "https://choosealicense.com/licenses/mit/";
+			break;
+		case " GNU GPLv3":
+			return "https://choosealicense.com/licenses/gpl-3.0/";
+			break;
+		case " ISC":
+			return "https://choosealicense.com/licenses/isc/";
+			break;
+		case " Apache License 2.0":
+			return "https://choosealicense.com/licenses/apache-2.0/";
+			break;
+		default:
+			" No License Used";
+			return "N/A";
+			break;
+	}
+}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {
-// 	const licenseLink =
-// }
-
-// TODO: Create a function to generate markdown for README
+//main funtion that creates the format of the readme and inputs the data fro mthe user to fill out the sections.
 function generateMarkdown(data) {
 	return `# ${data.title}
 ${renderLicenseBadge(data)}
@@ -46,6 +60,8 @@ ${data.usage}
 ## License 
 This project is licensed under ${data.license}
 
+For deatils visit ${renderLicenseLink(data)}
+
 ## How to Contribute 
 ${data.contribution}
 
@@ -59,4 +75,5 @@ https://github.com/${data.github}.
 `;
 }
 
+//exports the previous section's data to the index for use by the writefile function
 module.exports = generateMarkdown;

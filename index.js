@@ -5,9 +5,6 @@ const genMarkdown = require("./utils/generateMarkdown.js");
 //sets the var in global memory to be called later
 let filename;
 
-// todo WHEN I choose a license for my application from a list of options
-// todo THEN a badge for that license is added near the top of the README
-
 //launchers the question prompts using the inquirer npm
 function handleInquirer() {
 	inquirer //prompts the user for input to fill out the reame doc
@@ -58,7 +55,7 @@ function handleInquirer() {
 					" GNU GPLv3",
 					" ISC",
 					" Apache License 2.0",
-					" GNU GPLv2",
+					" No License Used",
 				],
 			},
 			{
@@ -72,9 +69,8 @@ function handleInquirer() {
 				message:
 					"Which email would you like users to contact about this project?",
 			},
-		]) //
+		]) //generates the file name based on users chioce of project title, then passes user input to the markdown document.
 		.then((input) => {
-			//generates the file name based on users chioce of project title, then passes user input to the markdown document.
 			filename = `${input.title.toLowerCase().split(" ").join("")}_readme.md`;
 			return genMarkdown(input);
 		}) // applies output from markdown document to the writefile funtion
