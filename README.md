@@ -2,6 +2,8 @@
 
 ![badge](https://img.shields.io/badge/license-MIT-green)
 
+![badge](https://img.shields.io/badge/license-MIT-green)
+
 ## Link:https://github.com/eeoerkeedu/Handy_ReadMe_Generator
 
 ## Description
