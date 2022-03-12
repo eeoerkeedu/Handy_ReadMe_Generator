@@ -47,7 +47,7 @@ ${data.description}
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
-  * [How to Contribute](#How to Contribute)
+  * [How to Contribute](#Contribute)
   * [Tests](#tests)
   * [Questions](#questions)
 
@@ -60,9 +60,9 @@ ${data.usage}
 ## License 
 This project is licensed under ${data.license}
 
-For deatils visit ${renderLicenseLink(data)}
+For details visit ${renderLicenseLink(data)}
 
-## How to Contribute 
+## Contribute 
 ${data.contribution}
 
 ## Tests
